@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import './tbjeAPage.dart';
+import 'webviewPage.dart';
+
+//Programado por HeroRickyGames
 
 class Acre extends StatelessWidget {
   const Acre({Key? key}) : super(key: key);
@@ -10,16 +12,15 @@ class Acre extends StatelessWidget {
         appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: Container(
-        alignment: Alignment.center,
+
         child:
         Text(
-        'teste',
+        'Acre',
     ),
     ),
     ),
       body: Column(
         children: [
-
           Container(
             alignment: Alignment.center,
             padding: EdgeInsets.all(16),
@@ -28,14 +29,17 @@ class Acre extends StatelessWidget {
               onPressed: (){
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context){
-                      return tbjeA();
+                      String URL = "https://esaj.tjac.jus.br/cpopg/open.do";
+                      String title = "Tribunal de Justiça do Estado";
+
+                      return WebViewApp(URL, title);
                     }));
               },
               child:Text(
                 'Tribunal de Justiça do Estado',
                 style: TextStyle(
                 fontSize: 24,
-              ),
+               ),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red[900],
@@ -44,10 +48,18 @@ class Acre extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(10),
             child:
             ElevatedButton(
-              onPressed: (){ },
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context){
+                      String URL = "https://pje.trt14.jus.br/consultaprocessual/";
+                      String title = "Tribunal do trabalho";
+
+                      return WebViewApp(URL, title);
+                    }));
+              },
               child:
               Text(
                 'Tribunal do trabalho',
@@ -60,15 +72,30 @@ class Acre extends StatelessWidget {
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: (){ },
-            child: Text('Tribunal Regional Federal',
-              style: TextStyle(
-                fontSize: 24,
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(16),
+            child:
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context){
+                      String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
+                      String title = "Tribunal Regional Federal";
+
+                      return WebViewApp(URL, title);
+                    }));
+              },
+              child:
+              Text(
+                'Tribunal Regional Federal',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
               ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red[900],
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
             ),
           ),
         ]

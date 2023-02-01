@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './Acre.dart';
+
 //programado por HeroRickyGames
 
 void main() {
@@ -42,10 +43,9 @@ class mainActivity extends State<WebViewApp> {
       appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: Container(
-          alignment: Alignment.center,
           child:
             Text(
-              'teste',
+              'CJP - Consulta Jurídica de Processos',
             ),
       ),
       ),
@@ -69,7 +69,7 @@ class mainActivity extends State<WebViewApp> {
           ),
           Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(10),
             child:
             ElevatedButton(
               onPressed: (){ },
