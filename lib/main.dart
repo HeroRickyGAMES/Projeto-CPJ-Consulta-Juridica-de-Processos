@@ -202,7 +202,7 @@ class mainActivity extends State<WebViewApp> {
             ElevatedButton(
               onPressed: BrasiliaBTN,
               child: Text(
-                'Distrito Federal (Brasília)',
+                'Brasília (Distrito Federal)',
                 style: TextStyle(
                   fontSize: 24,
                 ),
