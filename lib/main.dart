@@ -9,6 +9,7 @@ import './Brasilia.dart';
 import './EspiritoSanto.dart';
 import './Goias.dart';
 import './Maranhao.dart';
+import './MatoGrosso.dart';
 
 //Programado por HeroRickyGames
 
@@ -121,6 +122,14 @@ class mainActivity extends State<WebViewApp> {
         }));
 
   }
+  void MatoGrossoBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return MatoGrosso();
+        }));
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,165 +144,186 @@ class mainActivity extends State<WebViewApp> {
       ),
       body: Column(
         children: [
-
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(16),
-            child:
-            ElevatedButton(
-              onPressed: acrebtn,
-              child: Text(
-                'Acre',
-                style: TextStyle(
-                fontSize: 24,
-              ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: AlagoasBTN,
-              child: Text(
-                'Alagoas',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(16),
+                child:
+                ElevatedButton(
+                  onPressed: acrebtn,
+                  child: Text(
+                    'Acre',
+                    style: TextStyle(
+                    fontSize: 24,
+                  ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: amapabtn,
-              child: Text(
-                'Amapá',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: AlagoasBTN,
+                  child: Text(
+                    'Alagoas',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: Amazonasbtn,
-              child: Text(
-                'Amazonas',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: amapabtn,
+                  child: Text(
+                    'Amapá',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: BahiaBTN,
-              child: Text(
-                'Bahia',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: Amazonasbtn,
+                  child: Text(
+                    'Amazonas',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: BrasiliaBTN,
-              child: Text(
-                'Brasília (Distrito Federal)',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: BahiaBTN,
+                  child: Text(
+                    'Bahia',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: CearaBTN,
-              child: Text(
-                'Ceará',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: BrasiliaBTN,
+                  child: Text(
+                    'Brasília (Distrito Federal)',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: CearaBTN,
-              child: Text(
-                'Espirito Santo',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: CearaBTN,
+                  child: Text(
+                    'Ceará',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: CearaBTN,
+                  child: Text(
+                    'Espirito Santo',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
               ),
-            ),
-          ),
-      ElevatedButton(
-        onPressed: GoiasBTN,
-        child: Text(
-          'Goiás',
-          style: TextStyle(
-            fontSize: 24,
-          ),
-        ),
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.red[900],
-        ),
-      ),
           ElevatedButton(
-            onPressed: MaranhaoBTN,
+            onPressed: GoiasBTN,
             child: Text(
-              'Maranhão',
+              'Goiás',
               style: TextStyle(
                 fontSize: 24,
               ),
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.red[900],
+            ),
+          ),
+          Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.all(10),
+              child:
+              ElevatedButton(
+                onPressed: MaranhaoBTN,
+                child: Text(
+                  'Maranhão',
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red[900],
+                ),
+              ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: MatoGrossoBTN,
+              child: Text(
+                'Mato Grosso',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
             ),
           ),
         ]
