@@ -4,6 +4,7 @@ import './Acre.dart';
 import './Alagoas.dart';
 import './amapa.dart';
 import './Bahia.dart';
+import './Ceara.dart';
 
 //Programado por HeroRickyGames
 
@@ -73,6 +74,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Bahia();
+        }));
+
+  }
+  void CearaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Ceara();
         }));
 
   }
@@ -168,6 +177,23 @@ class mainActivity extends State<WebViewApp> {
               onPressed: BahiaBTN,
               child: Text(
                 'Bahia',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: CearaBTN,
+              child: Text(
+                'Ceará',
                 style: TextStyle(
                   fontSize: 24,
                 ),
