@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './Acre.dart';
 import './Alagoas.dart';
 import './amapa.dart';
+import './Bahia.dart';
 
 //Programado por HeroRickyGames
 
@@ -63,6 +64,15 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Amazonas();
+        }));
+
+  }
+
+  void BahiaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Bahia();
         }));
 
   }
@@ -141,6 +151,23 @@ class mainActivity extends State<WebViewApp> {
               onPressed: Amazonasbtn,
               child: Text(
                 'Amazonas',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: BahiaBTN,
+              child: Text(
+                'Bahia',
                 style: TextStyle(
                   fontSize: 24,
                 ),
