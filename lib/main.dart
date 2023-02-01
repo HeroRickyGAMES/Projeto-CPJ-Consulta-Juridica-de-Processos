@@ -6,6 +6,7 @@ import './amapa.dart';
 import './Bahia.dart';
 import './Ceara.dart';
 import './Brasilia.dart';
+import './EspiritoSanto.dart';
 
 //Programado por HeroRickyGames
 
@@ -94,7 +95,14 @@ class mainActivity extends State<WebViewApp> {
         }));
 
   }
+  void EspiritoSantoBTN()  {
 
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return EspiritoSanto();
+        }));
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -220,6 +228,23 @@ class mainActivity extends State<WebViewApp> {
               onPressed: CearaBTN,
               child: Text(
                 'Ceará',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: CearaBTN,
+              child: Text(
+                'Espirito Santo',
                 style: TextStyle(
                   fontSize: 24,
                 ),
