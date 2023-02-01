@@ -8,6 +8,7 @@ import './Ceara.dart';
 import './Brasilia.dart';
 import './EspiritoSanto.dart';
 import './Goias.dart';
+import './Maranhao.dart';
 
 //Programado por HeroRickyGames
 
@@ -109,6 +110,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Goias();
+        }));
+
+  }
+  void MaranhaoBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Maranhao();
         }));
 
   }
@@ -275,6 +284,18 @@ class mainActivity extends State<WebViewApp> {
           backgroundColor: Colors.red[900],
         ),
       ),
+          ElevatedButton(
+            onPressed: MaranhaoBTN,
+            child: Text(
+              'Maranhão',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red[900],
+            ),
+          ),
         ]
       ),
     );
