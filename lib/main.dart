@@ -161,8 +161,11 @@ class mainActivity extends State<WebViewApp> {
             ),
       ),
       ),
-      body: Column(
-        children: [
+      body: Scrollbar(
+        child:
+        Column(
+
+            children: [
               Container(
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(16),
@@ -172,8 +175,8 @@ class mainActivity extends State<WebViewApp> {
                   child: Text(
                     'Acre',
                     style: TextStyle(
-                    fontSize: 24,
-                  ),
+                      fontSize: 24,
+                    ),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red[900],
@@ -299,26 +302,10 @@ class mainActivity extends State<WebViewApp> {
                   ),
                 ),
               ),
-          ElevatedButton(
-            onPressed: GoiasBTN,
-            child: Text(
-              'Goiás',
-              style: TextStyle(
-                fontSize: 24,
-              ),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red[900],
-            ),
-          ),
-          Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
-              child:
               ElevatedButton(
-                onPressed: MaranhaoBTN,
+                onPressed: GoiasBTN,
                 child: Text(
-                  'Maranhão',
+                  'Goiás',
                   style: TextStyle(
                     fontSize: 24,
                   ),
@@ -327,59 +314,76 @@ class mainActivity extends State<WebViewApp> {
                   backgroundColor: Colors.red[900],
                 ),
               ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: MatoGrossoBTN,
-              child: Text(
-                'Mato Grosso',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: MaranhaoBTN,
+                  child: Text(
+                    'Maranhão',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: MatoGrossoDoSulBTN,
-              child: Text(
-                'Mato Grosso do Sul',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: MatoGrossoBTN,
+                  child: Text(
+                    'Mato Grosso',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
-            child:
-            ElevatedButton(
-              onPressed: MinasGeraisBTN,
-              child: Text(
-                'Minas Gerais',
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: MatoGrossoDoSulBTN,
+                  child: Text(
+                    'Mato Grosso do Sul',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
                 ),
               ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red[900],
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: MinasGeraisBTN,
+                  child: Text(
+                    'Minas Gerais',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
               ),
-            ),
-          ),
-        ]
+            ]
+        ),
       ),
     );
   }
