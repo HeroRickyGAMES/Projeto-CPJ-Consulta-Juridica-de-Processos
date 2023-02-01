@@ -44,8 +44,21 @@ class _WebViewAppState extends State<WebViewApp> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red[900],
+          actions: <Widget>[
+            ElevatedButton(onPressed: (){
+              print("Voltando");
+              controller.goBack();
+            },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red[900],
+                ),
+                child: Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg')
+            ),
+            ElevatedButton(onPressed: (){ },
+                child: Text('Para frente')
+            )
+          ],
         title: Text(widget.title),
-
       ),
       body: WebViewWidget(
         controller: controller,
