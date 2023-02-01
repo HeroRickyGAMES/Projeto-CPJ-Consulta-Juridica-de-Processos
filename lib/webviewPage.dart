@@ -34,6 +34,8 @@ class _WebViewAppState extends State<WebViewApp> {
       ..loadRequest(
         Uri.parse(widget.url),
       );
+
+    controller.setJavaScriptMode(JavaScriptMode.unrestricted);
   }
 
   @override

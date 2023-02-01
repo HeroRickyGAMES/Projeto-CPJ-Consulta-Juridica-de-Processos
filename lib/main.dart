@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './Acre.dart';
 import './Alagoas.dart';
+import './amapa.dart';
 
 //Programado por HeroRickyGames
 
@@ -47,6 +48,15 @@ class mainActivity extends State<WebViewApp> {
 
   }
 
+  void amapabtn()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Amapa();
+        }));
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +78,9 @@ class mainActivity extends State<WebViewApp> {
             child:
             ElevatedButton(
               onPressed: acrebtn,
-              child: Text('Acre', style: TextStyle(
+              child: Text(
+                'Acre',
+                style: TextStyle(
                 fontSize: 24,
               ),
               ),
@@ -83,7 +95,25 @@ class mainActivity extends State<WebViewApp> {
             child:
             ElevatedButton(
               onPressed: AlagoasBTN,
-              child: Text('Alagoas',
+              child: Text(
+                'Alagoas',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: amapabtn,
+              child: Text(
+                'Amapá',
                 style: TextStyle(
                   fontSize: 24,
                 ),
