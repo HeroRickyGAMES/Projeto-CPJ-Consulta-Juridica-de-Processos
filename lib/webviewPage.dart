@@ -49,13 +49,19 @@ class _WebViewAppState extends State<WebViewApp> {
               print("Voltando");
               controller.goBack();
             },
-                style: ElevatedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],
                 ),
-                child: Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg')
+                child: Image.network('https://raw.githubusercontent.com/HeroRickyGAMES/Projeto-CPJ-Consulta-Juridica-de-Processos/master/src/voltar.png')
             ),
-            ElevatedButton(onPressed: (){ },
-                child: Text('Para frente')
+            ElevatedButton(onPressed: (){
+              print("Indo pra frente");
+              controller.goForward();
+            },
+              style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red[900],
+            ),
+                child: Image.network('https://raw.githubusercontent.com/HeroRickyGAMES/Projeto-CPJ-Consulta-Juridica-de-Processos/master/src/irprafrente.png')
             )
           ],
         title: Text(widget.title),
