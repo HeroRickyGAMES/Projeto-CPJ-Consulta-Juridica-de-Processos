@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import './Acre.dart';
+import './Alagoas.dart';
 
-//programado por HeroRickyGames
+//Programado por HeroRickyGames
 
 void main() {
 
@@ -36,6 +37,15 @@ class mainActivity extends State<WebViewApp> {
     }));
 
 }
+
+  void AlagoasBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Alagoas();
+        }));
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +82,7 @@ class mainActivity extends State<WebViewApp> {
             padding: EdgeInsets.all(10),
             child:
             ElevatedButton(
-              onPressed: (){ },
+              onPressed: AlagoasBTN,
               child: Text('Alagoas',
                 style: TextStyle(
                   fontSize: 24,
