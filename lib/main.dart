@@ -1,3 +1,4 @@
+import 'package:cpj_consulta_juridica_de_processos/Amazonas.dart';
 import 'package:flutter/material.dart';
 import './Acre.dart';
 import './Alagoas.dart';
@@ -53,6 +54,15 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Amapa();
+        }));
+
+  }
+
+  void Amazonasbtn()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Amazonas();
         }));
 
   }
@@ -114,6 +124,23 @@ class mainActivity extends State<WebViewApp> {
               onPressed: amapabtn,
               child: Text(
                 'Amapá',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: Amazonasbtn,
+              child: Text(
+                'Amazonas',
                 style: TextStyle(
                   fontSize: 24,
                 ),
