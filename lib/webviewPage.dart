@@ -36,14 +36,16 @@ class _WebViewAppState extends State<WebViewApp> {
       );
 
     controller.setJavaScriptMode(JavaScriptMode.unrestricted);
+    controller.canGoBack();
+    controller.canGoForward();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: Text(widget.title),
+
       ),
       body: WebViewWidget(
         controller: controller,

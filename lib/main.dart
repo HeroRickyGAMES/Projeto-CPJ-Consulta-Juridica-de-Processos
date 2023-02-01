@@ -7,6 +7,7 @@ import './Bahia.dart';
 import './Ceara.dart';
 import './Brasilia.dart';
 import './EspiritoSanto.dart';
+import './Goias.dart';
 
 //Programado por HeroRickyGames
 
@@ -100,6 +101,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return EspiritoSanto();
+        }));
+
+  }
+  void GoiasBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Goias();
         }));
 
   }
@@ -254,6 +263,18 @@ class mainActivity extends State<WebViewApp> {
               ),
             ),
           ),
+      ElevatedButton(
+        onPressed: GoiasBTN,
+        child: Text(
+          'Goiás',
+          style: TextStyle(
+            fontSize: 24,
+          ),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.red[900],
+        ),
+      ),
         ]
       ),
     );
