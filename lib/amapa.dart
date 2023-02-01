@@ -54,7 +54,7 @@ class Amapa extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
-                        String URL = "https://pje.trt19.jus.br/consultaprocessual/";
+                        String URL = "https://pje.trt8.jus.br/consultaprocessual/";
                         String title = "Tribunal do trabalho";
 
                         return WebViewApp(URL, title);
@@ -80,7 +80,7 @@ class Amapa extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
-                        String URL = "http://portal.trf5.jus.br/cp/";
+                        String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
                         String title = "Tribunal Regional Federal";
 
                         return WebViewApp(URL, title);

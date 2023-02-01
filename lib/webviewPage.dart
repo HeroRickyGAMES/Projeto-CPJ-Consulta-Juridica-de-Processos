@@ -42,6 +42,7 @@ class _WebViewAppState extends State<WebViewApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red[900],
         title: Text(widget.title),
       ),
       body: WebViewWidget(
