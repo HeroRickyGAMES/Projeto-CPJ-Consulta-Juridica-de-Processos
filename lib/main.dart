@@ -161,10 +161,10 @@ class mainActivity extends State<WebViewApp> {
             ),
       ),
       ),
-      body: Scrollbar(
-        child:
-        Column(
-
+      body: Center(
+      child: SingleChildScrollView(
+      child:
+      Column(
             children: [
               Container(
                 alignment: Alignment.center,
@@ -385,6 +385,7 @@ class mainActivity extends State<WebViewApp> {
             ]
         ),
       ),
+      )
     );
   }
 }
