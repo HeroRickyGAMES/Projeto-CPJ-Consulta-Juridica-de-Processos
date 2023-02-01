@@ -3,8 +3,8 @@ import 'webviewPage.dart';
 
 //Programado por HeroRickyGames
 
-class MatoGrosso extends StatelessWidget {
-  const MatoGrosso({Key? key}) : super(key: key);
+class MatoGrossodoSul extends StatelessWidget {
+  const MatoGrossodoSul({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class MatoGrosso extends StatelessWidget {
 
           child:
           Text(
-            'Mato Grosso',
+            'Mato Grosso do Sul',
           ),
         ),
       ),
@@ -29,7 +29,7 @@ class MatoGrosso extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
-                        String URL = "https://monitorarprocesso.com.br/tje/mt.html";
+                        String URL = "https://esaj.tjms.jus.br/cpopg5/open.do";
                         String title = "Tribunal de Justiça do Estado";
 
                         return WebViewApp(URL, title);
@@ -54,7 +54,7 @@ class MatoGrosso extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
-                        String URL = "https://pje.trt23.jus.br/consultaprocessual/";
+                        String URL = "https://monitorarprocesso.com.br/trt/ms.html";
                         String title = "Tribunal do trabalho";
 
                         return WebViewApp(URL, title);
@@ -80,7 +80,7 @@ class MatoGrosso extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
-                        String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
+                        String URL = "https://www.jfsp.jus.br/foruns-federais/";
                         String title = "Tribunal Regional Federal";
 
                         return WebViewApp(URL, title);

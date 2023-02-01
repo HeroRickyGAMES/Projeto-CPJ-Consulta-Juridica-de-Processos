@@ -10,6 +10,7 @@ import './EspiritoSanto.dart';
 import './Goias.dart';
 import './Maranhao.dart';
 import './MatoGrosso.dart';
+import './MatoGrossoDoSul.dart';
 
 //Programado por HeroRickyGames
 
@@ -130,6 +131,15 @@ class mainActivity extends State<WebViewApp> {
         }));
 
   }
+  void MatoGrossoDoSulBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return MatoGrossodoSul();
+        }));
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -317,6 +327,23 @@ class mainActivity extends State<WebViewApp> {
               onPressed: MatoGrossoBTN,
               child: Text(
                 'Mato Grosso',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red[900],
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
+            ElevatedButton(
+              onPressed: MatoGrossoDoSulBTN,
+              child: Text(
+                'Mato Grosso do Sul',
                 style: TextStyle(
                   fontSize: 24,
                 ),
