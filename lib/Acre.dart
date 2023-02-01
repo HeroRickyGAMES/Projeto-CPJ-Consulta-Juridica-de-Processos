@@ -1,54 +1,22 @@
 import 'package:flutter/material.dart';
-import './Acre.dart';
-//programado por HeroRickyGames
+import './tbjeAPage.dart';
 
-void main() {
-
-  runApp(
-    MaterialApp(
-      theme: ThemeData(
-      ),
-      home: const WebViewApp(),
-    ),
-  );
-}
-
-class WebViewApp extends StatefulWidget {
-  const WebViewApp({super.key});
-
-  @override
-  State<WebViewApp> createState() => mainActivity();
-}
-
-class mainActivity extends State<WebViewApp> {
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  void acrebtn()  {
-
-    Navigator.push(context,
-    MaterialPageRoute(builder: (context){
-      return Acre();
-    }));
-
-}
+class Acre extends StatelessWidget {
+  const Acre({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: Container(
-          alignment: Alignment.center,
-          child:
-            Text(
-              'teste',
-            ),
-      ),
-      ),
+        alignment: Alignment.center,
+        child:
+        Text(
+        'teste',
+    ),
+    ),
+    ),
       body: Column(
         children: [
 
@@ -57,8 +25,15 @@ class mainActivity extends State<WebViewApp> {
             padding: EdgeInsets.all(16),
             child:
             ElevatedButton(
-              onPressed: acrebtn,
-              child: Text('Acre', style: TextStyle(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context){
+                      return tbjeA();
+                    }));
+              },
+              child:Text(
+                'Tribunal de Justiça do Estado',
+                style: TextStyle(
                 fontSize: 24,
               ),
               ),
@@ -73,7 +48,9 @@ class mainActivity extends State<WebViewApp> {
             child:
             ElevatedButton(
               onPressed: (){ },
-              child: Text('Alagoas',
+              child:
+              Text(
+                'Tribunal do trabalho',
                 style: TextStyle(
                   fontSize: 24,
                 ),
@@ -83,8 +60,20 @@ class mainActivity extends State<WebViewApp> {
               ),
             ),
           ),
+          ElevatedButton(
+            onPressed: (){ },
+            child: Text('Tribunal Regional Federal',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red[900],
+            ),
+          ),
         ]
-      ),
+    ),
     );
   }
 }
+
