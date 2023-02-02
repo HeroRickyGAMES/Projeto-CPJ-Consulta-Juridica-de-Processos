@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'webviewPage.dart';
+import 'webViewWindows.dart';
 
 //Programado por HeroRickyGames
 
@@ -27,13 +30,35 @@ class MinasGerais extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://www.tjmg.jus.br/portal-tjmg/processos/andamento-processual/#.Y9qp0-xv8bs";
-                        String title = "Tribunal de Justiça do Estado";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  print(Platform.isAndroid);
+
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser();
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    print('Está passando para o android por algum motivo retardado');
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+
+
+                          String URL = "https://www.tjmg.jus.br/portal-tjmg/processos/andamento-processual/#.Y9qp0-xv8bs";
+                          String title = "Tribunal de Justiça do Estado";
+
+                          return WebViewApp(URL, title);
+                        }));
+
+                  }
                 },
                 child:Text(
                   'Tribunal de Justiça do Estado',
@@ -54,6 +79,7 @@ class MinasGerais extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context){
+
                         String URL = "https://pje.trt3.jus.br/consultaprocessual/";
                         String title = "Tribunal do trabalho";
 

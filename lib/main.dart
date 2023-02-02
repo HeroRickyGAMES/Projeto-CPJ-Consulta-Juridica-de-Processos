@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:cpj_consulta_juridica_de_processos/Amazonas.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './Acre.dart';
 import './Alagoas.dart';
 import './amapa.dart';
@@ -41,6 +44,10 @@ class mainActivity extends State<WebViewApp> {
   }
 
   void acrebtn()  {
+
+
+    print(Platform.isAndroid);
+    print(Platform.isWindows);
 
     Navigator.push(context,
     MaterialPageRoute(builder: (context){
@@ -144,7 +151,7 @@ class mainActivity extends State<WebViewApp> {
 
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
-          return MatoGrossodoSul();
+          return MinasGerais();
         }));
 
   }
