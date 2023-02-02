@@ -138,7 +138,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
           },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],
-                  padding: EdgeInsets.all(5)
+                  padding: EdgeInsets.all(13)
               ),
               child: Image.network('https://raw.githubusercontent.com/HeroRickyGAMES/Projeto-CPJ-Consulta-Juridica-de-Processos/master/src/voltar.png')
           ),
@@ -148,7 +148,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
           },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],
-                  padding: EdgeInsets.all(5)
+                  padding: EdgeInsets.all(13)
               ),
               child: Image.network('https://raw.githubusercontent.com/HeroRickyGAMES/Projeto-CPJ-Consulta-Juridica-de-Processos/master/src/irprafrente.png')
           )

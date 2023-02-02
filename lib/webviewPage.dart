@@ -51,7 +51,7 @@ class _WebViewAppState extends State<WebViewApp> {
             },
                   style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red[900],
-                    padding: EdgeInsets.all(5)
+                  padding: EdgeInsets.all(5)
                 ),
                 child: Image.network('https://raw.githubusercontent.com/HeroRickyGAMES/Projeto-CPJ-Consulta-Juridica-de-Processos/master/src/voltar.png')
             ),
