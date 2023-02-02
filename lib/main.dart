@@ -15,6 +15,7 @@ import './Maranhao.dart';
 import './MatoGrosso.dart';
 import './MatoGrossoDoSul.dart';
 import './MinasGerais.dart';
+import './para.dart';
 
 //Programado por HeroRickyGames
 
@@ -152,6 +153,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return MinasGerais();
+        }));
+
+  }
+  void ParaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Para();
         }));
 
   }
@@ -385,6 +394,23 @@ class mainActivity extends State<WebViewApp> {
                   onPressed: MinasGeraisBTN,
                   child: Text(
                     'Minas Gerais',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: ParaBTN,
+                  child: Text(
+                    'Pará',
                     style: TextStyle(
                       fontSize: 24,
                     ),
