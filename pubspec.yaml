@@ -38,6 +38,22 @@ dependencies:
   cupertino_icons: ^1.0.2
   webview_flutter: ^4.0.2
   webview_windows: ^0.2.2
+  flutter_launcher_icons: ^0.11.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path_android: "assets/justica.png"
+  icon_size_android: 256
+  image_path_ios: "assets/justica.png"
+  image_path_windows: "assets/justica.png"
+  image_path: "assets/justica.png"
+  adaptive_icon_foreground: "assets/justica.png"
+  min_sdk_android: 21
+  windows:
+    generate: true
+    image_path: "assets/justica.png"
+    icon_size: 256 # min:48, max:256, default: 48
 
 dev_dependencies:
   flutter_test:
