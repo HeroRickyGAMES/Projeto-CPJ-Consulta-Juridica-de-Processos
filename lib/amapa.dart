@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'webviewPage.dart';
+import 'webViewWindows.dart';
 
 //Programado por HeroRickyGames
 
@@ -27,13 +30,28 @@ class Amapa extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://tucujuris.tjap.jus.br/tucujuris/pages/consultar-processo/consultar-processo.html?refer=java";
-                        String title = "Tribunal de Justiça do Estado";
+                  String URL = "https://tucujuris.tjap.jus.br/tucujuris/pages/consultar-processo/consultar-processo.html?refer=java";
+                  String title = "Tribunal de Justiça do Estado";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+                  }
                 },
                 child:Text(
                   'Tribunal de Justiça do Estado',
@@ -52,13 +70,28 @@ class Amapa extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://pje.trt8.jus.br/consultaprocessual/";
-                        String title = "Tribunal do trabalho";
+                  String URL = "https://pje.trt8.jus.br/consultaprocessual/";
+                  String title = "Tribunal do trabalho";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+                  }
                 },
                 child:
                 Text(
@@ -78,13 +111,28 @@ class Amapa extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
-                        String title = "Tribunal Regional Federal";
+                  String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
+                  String title = "Tribunal Regional Federal";
+                 
+                  if(Platform.isWindows){
 
-                        return WebViewApp(URL, title);
-                      }));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+                  }
                 },
                 child:
                 Text(
