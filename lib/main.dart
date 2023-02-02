@@ -309,6 +309,10 @@ class mainActivity extends State<WebViewApp> {
                   ),
                 ),
               ),
+        Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(10),
+            child:
               ElevatedButton(
                 onPressed: GoiasBTN,
                 child: Text(
@@ -321,6 +325,7 @@ class mainActivity extends State<WebViewApp> {
                   backgroundColor: Colors.red[900],
                 ),
               ),
+        ),
               Container(
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(10),
