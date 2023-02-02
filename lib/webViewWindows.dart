@@ -7,7 +7,17 @@ import 'package:webview_windows/webview_windows.dart';
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() {
-  runApp(MyApp());
+
+  runApp(
+    MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: false,
+        primaryColor: Colors.white,
+      ),
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -72,7 +82,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
               ),
               actions: [
                 TextButton(
-                  child: Text('Continue'),
+                  child: Text('Continuar'),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -99,7 +109,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
           children: [
             Expanded(
                 child: Card(
-                    color: Colors.transparent,
+                    color: Colors.white,
                     elevation: 0,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Stack(
