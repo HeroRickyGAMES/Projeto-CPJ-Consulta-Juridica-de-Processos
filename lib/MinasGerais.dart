@@ -31,31 +31,27 @@ class MinasGerais extends StatelessWidget {
               ElevatedButton(
                 onPressed: (){
 
-                  print(Platform.isAndroid);
+                  String URL = "https://www.tjmg.jus.br/portal-tjmg/processos/andamento-processual/#.Y9qp0-xv8bs";
+                  String title = "Tribunal de Justiça do Estado";
 
                   if(Platform.isWindows){
 
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context){
 
-                          return ExampleBrowser();
+                          return ExampleBrowser(URL);
+
                         }));
 
                   }
 
                   if(Platform.isAndroid){
 
-                    print('Está passando para o android por algum motivo retardado');
-
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context){
 
-
-
-                          String URL = "https://www.tjmg.jus.br/portal-tjmg/processos/andamento-processual/#.Y9qp0-xv8bs";
-                          String title = "Tribunal de Justiça do Estado";
-
                           return WebViewApp(URL, title);
+
                         }));
 
                   }
@@ -77,14 +73,31 @@ class MinasGerais extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
+                  String URL = "https://pje.trt3.jus.br/consultaprocessual/";
+                  String title = "Tribunal do trabalho";
 
-                        String URL = "https://pje.trt3.jus.br/consultaprocessual/";
-                        String title = "Tribunal do trabalho";
+                  if(Platform.isWindows){
 
-                        return WebViewApp(URL, title);
-                      }));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+
+                  }
+
                 },
                 child:
                 Text(
@@ -104,13 +117,31 @@ class MinasGerais extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
-                        String title = "Tribunal Regional Federal";
+                  String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
+                  String title = "Tribunal Regional Federal";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+
+                  }
+
                 },
                 child:
                 Text(

@@ -13,11 +13,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(navigatorKey: navigatorKey, home: ExampleBrowser());
+    return MaterialApp(navigatorKey: navigatorKey, home: ExampleBrowser(""));
   }
 }
 
 class ExampleBrowser extends StatefulWidget {
+
+  final String url;
+  ExampleBrowser(this.url);
+
   @override
   State<ExampleBrowser> createState() => _ExampleBrowser();
 }
@@ -48,7 +52,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
 
       await _controller.setBackgroundColor(Colors.transparent);
       await _controller.setPopupWindowPolicy(WebviewPopupWindowPolicy.deny);
-      await _controller.loadUrl('https://youtube.com');
+      await _controller.loadUrl(widget.url);
 
       if (!mounted) return;
       setState(() {});
@@ -82,7 +86,7 @@ class _ExampleBrowser extends State<ExampleBrowser> {
   Widget compositeView() {
     if (!_controller.value.isInitialized) {
       return const Text(
-        'Not Initialized',
+        'Iniciando...',
         style: TextStyle(
           fontSize: 24.0,
           fontWeight: FontWeight.w900,
