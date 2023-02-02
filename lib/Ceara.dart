@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'webviewPage.dart';
+import 'webViewWindows.dart';
 
 //Programado por HeroRickyGames
 
@@ -27,13 +30,31 @@ class Ceara extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://esaj.tjce.jus.br/cpopg/open.do";
-                        String title = "Tribunal de Justiça do Estado";
+                  String URL = "https://esaj.tjce.jus.br/cpopg/open.do";
+                  String title = "Tribunal de Justiça do Estado";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+
+                  }
+
                 },
                 child:Text(
                   'Tribunal de Justiça do Estado',
@@ -52,13 +73,29 @@ class Ceara extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "http://portal.trf5.jus.br/cp/";
-                        String title = "Tribunal do trabalho";
+                  String URL = "http://portal.trf5.jus.br/cp/";
+                  String title = "Tribunal do trabalho";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+                  }
                 },
                 child:
                 Text(
@@ -78,13 +115,30 @@ class Ceara extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context){
-                        String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
-                        String title = "Tribunal Regional Federal";
+                  String URL = "https://pje1g.trf1.jus.br/consultapublica/ConsultaPublica/listView.seam";
+                  String title = "Tribunal Regional Federal";
 
-                        return WebViewApp(URL, title);
-                      }));
+                  if(Platform.isWindows){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return ExampleBrowser(URL);
+
+                        }));
+
+                  }
+
+                  if(Platform.isAndroid){
+
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+
+                          return WebViewApp(URL, title);
+
+                        }));
+                  }
+
                 },
                 child:
                 Text(
