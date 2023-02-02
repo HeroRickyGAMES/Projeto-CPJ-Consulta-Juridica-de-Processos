@@ -16,6 +16,8 @@ import './MatoGrosso.dart';
 import './MatoGrossoDoSul.dart';
 import './MinasGerais.dart';
 import './para.dart';
+import './paraiba.dart';
+import './parana.dart';
 
 //Programado por HeroRickyGames
 
@@ -161,6 +163,23 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Para();
+        }));
+
+  }
+  void ParanaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Parana();
+        }));
+
+  }
+
+  void ParaibaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Paraiba();
         }));
 
   }
@@ -411,6 +430,40 @@ class mainActivity extends State<WebViewApp> {
                   onPressed: ParaBTN,
                   child: Text(
                     'Pará',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: ParaibaBTN,
+                  child: Text(
+                    'Paraíba',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: ParanaBTN,
+                  child: Text(
+                    'Paraná',
                     style: TextStyle(
                       fontSize: 24,
                     ),
