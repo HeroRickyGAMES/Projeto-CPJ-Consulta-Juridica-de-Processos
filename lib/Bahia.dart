@@ -58,7 +58,8 @@ class Bahia extends StatelessWidget {
                 child:Text(
                   'Tribunal de Justiça do Estado',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -102,7 +103,8 @@ class Bahia extends StatelessWidget {
                 Text(
                   'Tribunal do trabalho',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -145,7 +147,8 @@ class Bahia extends StatelessWidget {
                 Text(
                   'Tribunal Regional Federal',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(

@@ -27,6 +27,9 @@ void main() {
   runApp(
     MaterialApp(
       theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        primaryColor: Colors.white,
       ),
       home: const WebViewApp(),
     ),
@@ -82,7 +85,7 @@ class mainActivity extends State<WebViewApp> {
 
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
-          return Brasilia();
+          return Amazonas();
         }));
 
   }
@@ -220,6 +223,7 @@ class mainActivity extends State<WebViewApp> {
                     'Acre',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -237,6 +241,7 @@ class mainActivity extends State<WebViewApp> {
                     'Alagoas',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -254,6 +259,7 @@ class mainActivity extends State<WebViewApp> {
                     'Amapá',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -271,6 +277,7 @@ class mainActivity extends State<WebViewApp> {
                     'Amazonas',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -288,6 +295,7 @@ class mainActivity extends State<WebViewApp> {
                     'Bahia',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -305,6 +313,7 @@ class mainActivity extends State<WebViewApp> {
                     'Brasília (Distrito Federal)',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -322,6 +331,7 @@ class mainActivity extends State<WebViewApp> {
                     'Ceará',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -339,6 +349,7 @@ class mainActivity extends State<WebViewApp> {
                     'Espirito Santo',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -356,6 +367,7 @@ class mainActivity extends State<WebViewApp> {
                   'Goiás',
                   style: TextStyle(
                     fontSize: 24,
+                    color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -373,6 +385,7 @@ class mainActivity extends State<WebViewApp> {
                     'Maranhão',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -390,6 +403,7 @@ class mainActivity extends State<WebViewApp> {
                     'Mato Grosso',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -407,6 +421,7 @@ class mainActivity extends State<WebViewApp> {
                     'Mato Grosso do Sul',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -424,6 +439,7 @@ class mainActivity extends State<WebViewApp> {
                     'Minas Gerais',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -441,6 +457,7 @@ class mainActivity extends State<WebViewApp> {
                     'Pará',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -458,6 +475,7 @@ class mainActivity extends State<WebViewApp> {
                     'Paraíba',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -475,6 +493,7 @@ class mainActivity extends State<WebViewApp> {
                     'Paraná',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -492,6 +511,7 @@ class mainActivity extends State<WebViewApp> {
                     'Pernambuco',
                     style: TextStyle(
                       fontSize: 24,
+                      color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(

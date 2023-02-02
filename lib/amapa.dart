@@ -6,6 +6,20 @@ import 'webViewWindows.dart';
 
 //Programado por HeroRickyGames
 
+void main() {
+
+  runApp(
+    MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        primaryColor: Colors.white,
+      ),
+      home: const Amapa(),
+    ),
+  );
+}
+
 class Amapa extends StatelessWidget {
   const Amapa({Key? key}) : super(key: key);
 
@@ -56,7 +70,8 @@ class Amapa extends StatelessWidget {
                 child:Text(
                   'Tribunal de Justiça do Estado',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -97,7 +112,8 @@ class Amapa extends StatelessWidget {
                 Text(
                   'Tribunal do trabalho',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -138,7 +154,8 @@ class Amapa extends StatelessWidget {
                 Text(
                   'Tribunal Regional Federal',
                   style: TextStyle(
-                    fontSize: 24,
+                      fontSize: 24,
+                      color: Colors.white
                   ),
                 ),
                 style: ElevatedButton.styleFrom(

@@ -5,8 +5,21 @@ import 'webviewPage.dart';
 import 'webViewWindows.dart';
 
 //Programado por HeroRickyGames
+void main() {
 
+  runApp(
+    MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        primaryColor: Colors.white,
+      ),
+      home: const Acre(),
+    ),
+  );
+}
 class Acre extends StatelessWidget {
+
   const Acre({Key? key}) : super(key: key);
 
   @override
@@ -57,6 +70,7 @@ class Acre extends StatelessWidget {
                 'Tribunal de Justiça do Estado',
                 style: TextStyle(
                 fontSize: 24,
+                color: Colors.white
                ),
               ),
               style: ElevatedButton.styleFrom(
@@ -99,6 +113,7 @@ class Acre extends StatelessWidget {
                 'Tribunal do trabalho',
                 style: TextStyle(
                   fontSize: 24,
+                  color: Colors.white
                 ),
               ),
               style: ElevatedButton.styleFrom(
@@ -140,6 +155,7 @@ class Acre extends StatelessWidget {
                 'Tribunal Regional Federal',
                 style: TextStyle(
                   fontSize: 24,
+                  color: Colors.white
                 ),
               ),
               style: ElevatedButton.styleFrom(
