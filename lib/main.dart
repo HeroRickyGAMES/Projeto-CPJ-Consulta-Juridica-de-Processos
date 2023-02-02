@@ -18,6 +18,7 @@ import './MinasGerais.dart';
 import './para.dart';
 import './paraiba.dart';
 import './parana.dart';
+import './Pernambuco.dart';
 
 //Programado por HeroRickyGames
 
@@ -180,6 +181,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Paraiba();
+        }));
+
+  }
+  void PernambucoBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Pernambuco();
         }));
 
   }
@@ -464,6 +473,23 @@ class mainActivity extends State<WebViewApp> {
                   onPressed: ParanaBTN,
                   child: Text(
                     'Paraná',
+                    style: TextStyle(
+                      fontSize: 24,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: PernambucoBTN,
+                  child: Text(
+                    'Pernambuco',
                     style: TextStyle(
                       fontSize: 24,
                     ),
