@@ -19,6 +19,12 @@ import './para.dart';
 import './paraiba.dart';
 import './parana.dart';
 import './Pernambuco.dart';
+import './piaui.dart';
+import './RJ.dart';
+import './RN.dart';
+import './RS.dart';
+import './Rondonia.dart';
+import './Roraima.dart';
 
 //Programado por HeroRickyGames
 
@@ -192,6 +198,54 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Pernambuco();
+        }));
+
+  }
+  void PaiuiBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Piaui();
+        }));
+
+  }
+  void RJBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return RJ();
+        }));
+
+  }
+  void RNBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return RN();
+        }));
+
+  }
+  void RSBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return RS();
+        }));
+
+  }
+  void RondoniaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Rondonia();
+        }));
+
+  }
+  void RoraimaBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Roraima();
         }));
 
   }
@@ -512,6 +566,114 @@ class mainActivity extends State<WebViewApp> {
                     style: TextStyle(
                       fontSize: 24,
                       color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: PaiuiBTN,
+                  child: Text(
+                    'Piauí',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: RJBTN,
+                  child: Text(
+                    'Rio de Janeiro',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: RNBTN,
+                  child: Text(
+                    'Rio Grande do Norte',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: RSBTN,
+                  child: Text(
+                    'Rio Grande do Sul',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: RondoniaBTN,
+                  child: Text(
+                    'Rondônia',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: RoraimaBTN,
+                  child: Text(
+                    'Roraima',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
