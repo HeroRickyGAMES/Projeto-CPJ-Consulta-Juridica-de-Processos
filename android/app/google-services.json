@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "738403215696",
+    "project_id": "cpj-consulta-juridica",
+    "storage_bucket": "cpj-consulta-juridica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738403215696:android:29bec48b05014a71a52455",
+        "android_client_info": {
+          "package_name": "com.herorickystudios.cpj_consulta_juridica_de_processos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738403215696-tjb2oklnirocldn2mg0869n8vd1hfghq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBclZXLFuDAkrEmFDJdGXS6l6j7c-XyPI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738403215696-tjb2oklnirocldn2mg0869n8vd1hfghq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

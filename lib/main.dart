@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cpj_consulta_juridica_de_processos/Amazonas.dart';
+import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './Acre.dart';
@@ -31,6 +32,7 @@ import './Sergipe.dart';
 import './Tocantins.dart';
 import './Tribunais.dart';
 import './Noticias.dart';
+import './androidFirebase.dart';
 
 //Programado por HeroRickyGames
 
@@ -46,6 +48,22 @@ void main() {
       home: const WebViewApp(),
     ),
   );
+
+
+  if(Platform.isWindows){
+    const apiKey = 'AIzaSyBmRdONPl4sJ7sCTDgpBv11UsERPL1By_o';
+    const projectId = 'cpj-consulta-juridica';
+
+    Firestore.initialize(projectId);
+  }
+
+  if(Platform.isAndroid){
+    const apiKey = 'AIzaSyBclZXLFuDAkrEmFDJdGXS6l6j7c-XyPI0';
+    const projectId = 'cpj-consulta-juridica';
+
+    Firestore.initialize(projectId);
+  }
+
 }
 
 class WebViewApp extends StatefulWidget {
@@ -296,12 +314,17 @@ class mainActivity extends State<WebViewApp> {
 
   }
   void NoticiasBTN()  {
+    String titulo;
+    String Descricao;
+
+    titulo = "titulox";
+    Descricao = "Descriçãox";
 
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
-          return Noticias();
+          return Noticias(titulo, Descricao);
         }));
-
+    androidFirebase();
   }
 
   @override
