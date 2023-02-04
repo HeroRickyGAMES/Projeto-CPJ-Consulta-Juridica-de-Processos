@@ -27,6 +27,9 @@ import './Rondonia.dart';
 import './Roraima.dart';
 import './SC.dart';
 import './SP.dart';
+import './Sergipe.dart';
+import './Tocantins.dart';
+import './Tribunais.dart';
 
 //Programado por HeroRickyGames
 
@@ -264,6 +267,30 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return SP();
+        }));
+
+  }
+  void SergipeBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Sergipe();
+        }));
+
+  }
+  void TocantinsBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Tocantins();
+        }));
+
+  }
+  void TribunaisBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Tribunais();
         }));
 
   }
@@ -725,6 +752,60 @@ class mainActivity extends State<WebViewApp> {
                   onPressed: SPBTN,
                   child: Text(
                     'São Paulo',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: SergipeBTN,
+                  child: Text(
+                    'Sergipe',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: TocantinsBTN,
+                  child: Text(
+                    'Tocantins',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: TribunaisBTN,
+                  child: Text(
+                    'Outros Tribunais',
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.white
