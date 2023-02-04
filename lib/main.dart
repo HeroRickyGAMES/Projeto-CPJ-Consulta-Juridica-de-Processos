@@ -819,7 +819,20 @@ class mainActivity extends State<WebViewApp> {
             ]
         ),
       ),
-      )
+     ),
+      floatingActionButton:
+      FloatingActionButton.extended(
+          onPressed: null,
+          label:
+          Text(
+            'Acessar Noticias do app',
+            style:
+            TextStyle(
+                fontSize: 20
+            ),
+          ),
+        backgroundColor: Colors.red[400],
+      ),
     );
   }
 }
