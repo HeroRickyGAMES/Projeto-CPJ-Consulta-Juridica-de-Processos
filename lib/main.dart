@@ -30,6 +30,7 @@ import './SP.dart';
 import './Sergipe.dart';
 import './Tocantins.dart';
 import './Tribunais.dart';
+import './Noticias.dart';
 
 //Programado por HeroRickyGames
 
@@ -291,6 +292,14 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Tribunais();
+        }));
+
+  }
+  void NoticiasBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Noticias();
         }));
 
   }
@@ -822,7 +831,7 @@ class mainActivity extends State<WebViewApp> {
      ),
       floatingActionButton:
       FloatingActionButton.extended(
-          onPressed: null,
+          onPressed: NoticiasBTN,
           label:
           Text(
             'Acessar Noticias do app',
