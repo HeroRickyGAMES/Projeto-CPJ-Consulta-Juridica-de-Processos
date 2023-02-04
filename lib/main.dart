@@ -25,6 +25,8 @@ import './RN.dart';
 import './RS.dart';
 import './Rondonia.dart';
 import './Roraima.dart';
+import './SC.dart';
+import './SP.dart';
 
 //Programado por HeroRickyGames
 
@@ -246,6 +248,22 @@ class mainActivity extends State<WebViewApp> {
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
           return Roraima();
+        }));
+
+  }
+  void SCBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return SC();
+        }));
+
+  }
+  void SPBTN()  {
+
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return SP();
         }));
 
   }
@@ -671,6 +689,42 @@ class mainActivity extends State<WebViewApp> {
                   onPressed: RoraimaBTN,
                   child: Text(
                     'Roraima',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: SCBTN,
+                  child: Text(
+                    'Santa Catarina',
+                    style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.white
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red[900],
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child:
+                ElevatedButton(
+                  onPressed: SPBTN,
+                  child: Text(
+                    'São Paulo',
                     style: TextStyle(
                         fontSize: 24,
                         color: Colors.white
