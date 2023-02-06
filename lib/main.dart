@@ -49,16 +49,17 @@ void main() {
       home: const WebViewApp(),
     ),
   );
-  Firebase.initializeApp(
-    options: DefaultFirebaseOptions.android,
-  );
 
   if(Platform.isWindows){
-
+    Firebase.initializeApp(
+      options: DefaultFirebaseOptions.windows,
+    );
   }
 
   if(Platform.isAndroid){
-
+    Firebase.initializeApp(
+      options: DefaultFirebaseOptions.android,
+    );
   }
 
 }
@@ -314,16 +315,23 @@ class mainActivity extends State<WebViewApp> {
   }
   NoticiasBTN() {
 
-    var db = FirebaseFirestore.instance;
+    if(Platform.isWindows){
+      var snackBar = SnackBar(content: Text('A função acessar noticias não está disponivel no Windows ainda!'));
+      // Step 3
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }else if(Platform.isAndroid){
 
-    List<String> titulo = <String>[];
-    List<String> descricao = <String>[];
+      List<String> titulo = <String>[];
+      List<String> descricao = <String>[];
 
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context){
-          return Noticias(titulo, descricao);
-        }));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context){
+            return Noticias(titulo, descricao);
+          }));
+
+    }
   }
+
 
   @override
   Widget build(BuildContext context) {
