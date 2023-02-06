@@ -71,10 +71,12 @@ class WebViewApp extends StatefulWidget {
 }
 
 class mainActivity extends State<WebViewApp> {
+  bool startou = false;
 
   @override
   void initState() {
     super.initState();
+    startou = true;
   }
 
   void acrebtn()  {
@@ -310,7 +312,7 @@ class mainActivity extends State<WebViewApp> {
         }));
 
   }
-  void NoticiasBTN()  {
+  NoticiasBTN() {
 
     var db = FirebaseFirestore.instance;
 
@@ -323,8 +325,6 @@ class mainActivity extends State<WebViewApp> {
       for (var doc in event.docs) {
         //print("${doc.id} => ${doc.data()}");
         print("${doc.data()}");
-
-        var values = doc.data().values.toList();
 
         doc.data().forEach((key, value) {
 
@@ -339,7 +339,7 @@ class mainActivity extends State<WebViewApp> {
                 //print("${doc.id} => ${doc.data()}");
                 print("${doc.data()}");
 
-                doc.data().forEach((key, value) {
+                doc.data().forEach((key, value){
 
                   if(key == "descricao"){
                     print("valor é: " + value);
@@ -348,25 +348,23 @@ class mainActivity extends State<WebViewApp> {
 
                     print("valor na lista é " + "${descricao}");
 
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context){
+                          return Noticias(titulo, descricao);
+                        }));
+
                   }else{
                     print('não existe esse valor');
                   }
                 });
               }
             });
-
-
           }else{
             print('não existe esse valor');
           }
         });
       }
     });
-
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context){
-          return Noticias(titulo, descricao);
-        }));
   }
 
   @override
@@ -896,7 +894,7 @@ class mainActivity extends State<WebViewApp> {
      ),
       floatingActionButton:
       FloatingActionButton.extended(
-          onPressed: NoticiasBTN,
+          onPressed: startou == true ? () => NoticiasBTN() : null,
           label:
           Text(
             'Acessar Noticias do app',

@@ -1,5 +1,4 @@
-import 'dart:ffi';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Noticias extends StatefulWidget {
@@ -11,31 +10,19 @@ class Noticias extends StatefulWidget {
 
   @override
   State<Noticias> createState() => _NoticiasState();
+
 }
 
 class _NoticiasState extends State<Noticias> {
+@override
 
-  initState() {
-    super.initState();
-    WidgetsBinding.instance.addPersistentFrameCallback((timeStamp) {
-      setState(() {
-        widget.lista;
 
-        print("pos ${widget.lista}");
-
-      });
-    });
-  }
   @override
   Widget build(BuildContext context) {
-
-
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red[900],
         title: Container(
-
           child:
           Text(
             "Noticias",
@@ -58,7 +45,7 @@ class _NoticiasState extends State<Noticias> {
                 Column(
                   children: [
                 Container(
-                  color: Color.fromARGB(255, 45, 45, 45),
+
                 padding: EdgeInsets.all(16),
                   child:
                   Text(
@@ -70,7 +57,6 @@ class _NoticiasState extends State<Noticias> {
                   ),
                 ),
                     Container(
-                      color: Color.fromARGB(255, 45, 45, 45),
                       padding: EdgeInsets.all(16),
                       child:
                       Text(
@@ -82,13 +68,13 @@ class _NoticiasState extends State<Noticias> {
                     )
                    ),
                     Container(
-                        color: Color.fromARGB(255, 45, 45, 45),
-                        padding: EdgeInsets.all(double.infinity),
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        padding: EdgeInsets.only(right: double.infinity, bottom: 30),
                         child:
-                        const Image(
-                          image: NetworkImage('https://upload.wikimedia.org/wikipedia/pt/8/8d/Jailson_Mendes.jpg'),
-                        )
-                       ),
+                        Image.asset(
+                          'assets/borderline.png',
+                        ),
+                    ),
                   ],
                 ),
               ),
@@ -96,34 +82,6 @@ class _NoticiasState extends State<Noticias> {
             );
           }
       ),
-    );
-  }
-}
-class listaa extends StatefulWidget {
-  final List<String> lista;
-
-  const listaa(this.lista);
-
-  @override
-  State<listaa> createState() => _listaaState();
-}
-
-class _listaaState extends State<listaa> {
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        "${widget.lista}",
-        textAlign: TextAlign.center,
-        style:
-        TextStyle(
-            fontSize: 25
-        ),
-      ),
-      onTap: () {
-        print("o valor na noticia é: ${widget.lista.length}");
-        print("o valor na noticia é: ${widget.lista}");
-      },
     );
   }
 }
