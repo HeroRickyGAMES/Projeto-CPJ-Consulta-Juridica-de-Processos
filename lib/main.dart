@@ -319,52 +319,10 @@ class mainActivity extends State<WebViewApp> {
     List<String> titulo = <String>[];
     List<String> descricao = <String>[];
 
-    print("Estou funcionando de fundo!");
-
-    db.collection("noticias").get().then((event) {
-      for (var doc in event.docs) {
-        //print("${doc.id} => ${doc.data()}");
-        print("${doc.data()}");
-
-        doc.data().forEach((key, value) {
-
-          if(key == "titulo"){
-            print("valor é: " + value);
-
-            titulo.add(value);
-
-            print("valor na lista é " + "${titulo}");
-            db.collection("noticias").get().then((event) {
-              for (var doc in event.docs) {
-                //print("${doc.id} => ${doc.data()}");
-                print("${doc.data()}");
-
-                doc.data().forEach((key, value){
-
-                  if(key == "descricao"){
-                    print("valor é: " + value);
-
-                    descricao.add(value);
-
-                    print("valor na lista é " + "${descricao}");
-
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context){
-                          return Noticias(titulo, descricao);
-                        }));
-
-                  }else{
-                    print('não existe esse valor');
-                  }
-                });
-              }
-            });
-          }else{
-            print('não existe esse valor');
-          }
-        });
-      }
-    });
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context){
+          return Noticias(titulo, descricao);
+        }));
   }
 
   @override
