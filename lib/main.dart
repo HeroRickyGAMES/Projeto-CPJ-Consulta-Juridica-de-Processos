@@ -31,7 +31,6 @@ import './Sergipe.dart';
 import './Tocantins.dart';
 import './Tribunais.dart';
 import './Noticias.dart';
-import './androidFirebase.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -315,11 +314,12 @@ class mainActivity extends State<WebViewApp> {
 
     var db = FirebaseFirestore.instance;
 
-    List<String> valores = <String>[];
+    List<String> titulo = <String>[];
+    List<String> descricao = <String>[];
 
     print("Estou funcionando de fundo!");
 
-    db.collection("teste").get().then((event) {
+    db.collection("noticias").get().then((event) {
       for (var doc in event.docs) {
         //print("${doc.id} => ${doc.data()}");
         print("${doc.data()}");
@@ -327,28 +327,46 @@ class mainActivity extends State<WebViewApp> {
         var values = doc.data().values.toList();
 
         doc.data().forEach((key, value) {
-          print("key: " + key);
-          print("value: " + value);
 
-          valores.add(value);
+          if(key == "titulo"){
+            print("valor é: " + value);
 
-          print("valor na lista é " + "${valores}");
+            titulo.add(value);
 
+            print("valor na lista é " + "${titulo}");
+            db.collection("noticias").get().then((event) {
+              for (var doc in event.docs) {
+                //print("${doc.id} => ${doc.data()}");
+                print("${doc.data()}");
+
+                doc.data().forEach((key, value) {
+
+                  if(key == "descricao"){
+                    print("valor é: " + value);
+
+                    descricao.add(value);
+
+                    print("valor na lista é " + "${descricao}");
+
+                  }else{
+                    print('não existe esse valor');
+                  }
+                });
+              }
+            });
+
+
+          }else{
+            print('não existe esse valor');
+          }
         });
       }
     });
 
-    String titulo;
-    String Descricao;
-
-    titulo = "titulox";
-    Descricao = "Descriçãox";
-
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
-          return Noticias(titulo, Descricao, valores);
+          return Noticias(titulo, descricao);
         }));
-    androidFirebase();
   }
 
   @override

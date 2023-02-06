@@ -1,14 +1,13 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
-import 'package:webview_windows/webview_windows.dart';
-import 'androidFirebase.dart';
 
 class Noticias extends StatefulWidget {
 
-  final String titulo;
-  final String descricao;
   final List<String> lista;
+  final List<String> descricao;
 
-  const Noticias(this.titulo, this.descricao, this.lista);
+  const Noticias(this.lista, this.descricao);
 
   @override
   State<Noticias> createState() => _NoticiasState();
@@ -48,17 +47,52 @@ class _NoticiasState extends State<Noticias> {
           itemCount: widget.lista.length,
           itemBuilder: (BuildContext context, int index) {
             String key = widget.lista.elementAt(index);
+            String key2 = widget.descricao.elementAt(index);
             return Container(
-              height: 50,
-              child: Center(
+              child:  Container(
+                color: Color.fromARGB(255, 45, 45, 45),
+                  padding: EdgeInsets.all(16),
                 child:
-                Text(
-                  "$key",
-                  style:
-                  TextStyle(
-                      fontSize: 20),
+              Center(
+                child:
+                Column(
+                  children: [
+                Container(
+                  color: Color.fromARGB(255, 45, 45, 45),
+                padding: EdgeInsets.all(16),
+                  child:
+                  Text(
+                    "$key",
+                    style:
+                    TextStyle(
+                        fontSize: 20
+                    ),
+                  ),
                 ),
-            )
+                    Container(
+                      color: Color.fromARGB(255, 45, 45, 45),
+                      padding: EdgeInsets.all(16),
+                      child:
+                      Text(
+                          "$key2",
+                          style:
+                          TextStyle(
+                            fontSize: 20,
+                          ),
+                    )
+                   ),
+                    Container(
+                        color: Color.fromARGB(255, 45, 45, 45),
+                        padding: EdgeInsets.all(double.infinity),
+                        child:
+                        const Image(
+                          image: NetworkImage('https://upload.wikimedia.org/wikipedia/pt/8/8d/Jailson_Mendes.jpg'),
+                        )
+                       ),
+                  ],
+                ),
+              ),
+             )
             );
           }
       ),
