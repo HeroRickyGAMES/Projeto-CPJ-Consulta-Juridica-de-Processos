@@ -1,46 +1,28 @@
-import 'dart:io';
-
-import 'package:firedart/firedart.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 androidFirebase() async {
-  String x;
+  var db = FirebaseFirestore.instance;
 
-    if(Platform.isAndroid){
-
-
-
-      print("Funcionando no Android!");
-
-      CollectionReference teste = Firestore.instance.collection("teste");
-
-      List<dynamic> list = [
-        teste
-      ];
-
-      String documento = teste.toString().split('{').first;
-
-
-
-      print(list);
-    }
-
-    if(Platform.isWindows){
-
-
-
-      print("Funcionando no Windows!");
-
-      CollectionReference teste = Firestore.instance.collection("teste");
-
-      final testee = await teste.get();
-
-    print('snapshot: ${testee[1]}');
-    }
+  List<String> valores = <String>[];
 
   print("Estou funcionando de fundo!");
 
+  await db.collection("teste").get().then((event) {
+    for (var doc in event.docs) {
+      //print("${doc.id} => ${doc.data()}");
+      print("${doc.data()}");
 
+      var values = doc.data().values.toList();
 
+      doc.data().forEach((key, value) {
+        print("key: " + key);
+        print("value: " + value);
 
+        valores.add(value);
+
+        print("valor na lista é " + "${valores}");
+
+      });
+    }
+  });
 
 }

@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:cpj_consulta_juridica_de_processos/Amazonas.dart';
-import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './Acre.dart';
@@ -33,6 +32,9 @@ import './Tocantins.dart';
 import './Tribunais.dart';
 import './Noticias.dart';
 import './androidFirebase.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 //Programado por HeroRickyGames
 
@@ -48,20 +50,16 @@ void main() {
       home: const WebViewApp(),
     ),
   );
-
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.android,
+  );
 
   if(Platform.isWindows){
-    const apiKey = 'AIzaSyBmRdONPl4sJ7sCTDgpBv11UsERPL1By_o';
-    const projectId = 'cpj-consulta-juridica';
 
-    Firestore.initialize(projectId);
   }
 
   if(Platform.isAndroid){
-    const apiKey = 'AIzaSyBclZXLFuDAkrEmFDJdGXS6l6j7c-XyPI0';
-    const projectId = 'cpj-consulta-juridica';
 
-    Firestore.initialize(projectId);
   }
 
 }
@@ -314,6 +312,32 @@ class mainActivity extends State<WebViewApp> {
 
   }
   void NoticiasBTN()  {
+
+    var db = FirebaseFirestore.instance;
+
+    List<String> valores = <String>[];
+
+    print("Estou funcionando de fundo!");
+
+    db.collection("teste").get().then((event) {
+      for (var doc in event.docs) {
+        //print("${doc.id} => ${doc.data()}");
+        print("${doc.data()}");
+
+        var values = doc.data().values.toList();
+
+        doc.data().forEach((key, value) {
+          print("key: " + key);
+          print("value: " + value);
+
+          valores.add(value);
+
+          print("valor na lista é " + "${valores}");
+
+        });
+      }
+    });
+
     String titulo;
     String Descricao;
 
@@ -322,7 +346,7 @@ class mainActivity extends State<WebViewApp> {
 
     Navigator.push(context,
         MaterialPageRoute(builder: (context){
-          return Noticias(titulo, Descricao);
+          return Noticias(titulo, Descricao, valores);
         }));
     androidFirebase();
   }
